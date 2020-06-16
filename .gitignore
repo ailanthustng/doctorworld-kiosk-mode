@@ -1,0 +1,5 @@
+__pycache__
+.idea/
+
+# Service account key
+android-kiosk-test-280419-1675b87802ff.json
