@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+export GOOGLE_APPLICATION_CREDENTIALS="./android-kiosk-test-280419-1675b87802ff.json"
