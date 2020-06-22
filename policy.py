@@ -23,14 +23,17 @@ def patch_policy(androidmanagement, enterprise_name, web_app_name):
                 "defaultPermissionPolicy": "GRANT"
             }
         ],
-        "addUserDisabled": True,
-        "factoryResetDisabled": True,
-        # "installAppsDisabled": True, # this has to be disabled when first setting up a device
-        "mountPhysicalMediaDisabled": True,
-        "modifyAccountsDisabled": True,
-        "uninstallAppsDisabled": True,
-        "keyguardDisabled": True,  # lock screen related stuff
-        "statusReportingSettings": {
+        "installAppsDisabled": True,  # has to be False during setup
+        "mobileNetworksConfigDisabled": True,  # has to be False during setup
+        "wifiConfigDisabled": False,  # has to be False during setup
+        "kioskCustomization": {  # customize the KIOSK mode here
+            "powerButtonActions": "POWER_BUTTON_BLOCKED",
+            "systemErrorWarnings": "ERROR_AND_WARNINGS_ENABLED",
+            "systemNavigation": "NAVIGATION_DISABLED",
+            "statusBar": "NOTIFICATIONS_AND_SYSTEM_INFO_DISABLED",
+            "deviceSettings": "SETTINGS_ACCESS_BLOCKED"
+        },
+        "statusReportingSettings": {  # customize the status report from list_devices
             "applicationReportsEnabled": True,
             "deviceSettingsEnabled": True,
             "softwareInfoEnabled": True,
@@ -44,12 +47,16 @@ def patch_policy(androidmanagement, enterprise_name, web_app_name):
                 "includeRemovedApps": True
             }
         },
+        "addUserDisabled": True,
+        "factoryResetDisabled": True,
+        "mountPhysicalMediaDisabled": True,
+        "modifyAccountsDisabled": True,
+        "uninstallAppsDisabled": True,
+        "keyguardDisabled": True,  # lock screen related stuff
         "bluetoothContactSharingDisabled": True,
-        # "wifiConfigDisabled": True,
         "bluetoothConfigDisabled": True,
         "cellBroadcastsConfigDisabled": True,
         "credentialsConfigDisabled": True,
-        "mobileNetworksConfigDisabled": True,
         "tetheringConfigDisabled": True,
         "vpnConfigDisabled": True,
         "createWindowsDisabled": True,
@@ -71,16 +78,9 @@ def patch_policy(androidmanagement, enterprise_name, web_app_name):
         # is no suitable network in the last policy and the device boots into an app in lock task mode, or the user is
         # otherwise unable to reach device settings.
         "bluetoothDisabled": True,
-        # "debuggingFeaturesAllowed": True, #temporarily removed to enable debugging while testing
+        "debuggingFeaturesAllowed": False,
         "funDisabled": True,
         "appAutoUpdatePolicy": "ALWAYS",
-        "kioskCustomization": {
-            "powerButtonActions": "POWER_BUTTON_BLOCKED",
-            "systemErrorWarnings": "ERROR_AND_WARNINGS_ENABLED",
-            "systemNavigation": "NAVIGATION_DISABLED",
-            "statusBar": "NOTIFICATIONS_AND_SYSTEM_INFO_DISABLED",
-            "deviceSettings": "SETTINGS_ACCESS_BLOCKED"
-        },
     }
 
     # Write the new policy:

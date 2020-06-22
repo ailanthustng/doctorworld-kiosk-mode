@@ -17,18 +17,18 @@ def delete_device(androidmanagement, device_name):
     ).execute()
 
 
-def device_issue_command(androidmanagement, device_name, command):
+def device_issue_command(androidmanagement, device_name, command, password):
     result = androidmanagement.enterprises().devices().issueCommand(
         name=device_name,
         body={
             "type": command,
             "duration": "30s",
-            # "newPassword": "hello",
-            # "resetPasswordFlags": [
-            #     "LOCK_NOW",
-            #     "REQUIRE_ENTRY"
-            # this means that whenever the tablet is rebooted, a password is required to use the
-            # ]
+            "newPassword": password,
+            "resetPasswordFlags": [
+                "LOCK_NOW",
+                "REQUIRE_ENTRY"
+                # this means that whenever the tablet is rebooted, a password is required to use the device
+            ]
         }
     ).execute()
 

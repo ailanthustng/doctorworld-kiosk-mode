@@ -50,15 +50,16 @@ def main():
     # list_devices(androidmanagement, enterprise_name)
 
     # Use list devices to get device name
-    # device_name = ''
+    # device_name = 'enterprises/LC03o3xgx8/devices/3790f81e0a0fef76'
     # delete_device(androidmanagement, device_name)
 
     # Command can be 'REBOOT', 'LOCK', 'RESET_PASSWORD',
     # 'LOCK' means lock the screen
     # If using 'RESET_PASSWORD', edit newPassword and resetPasswordFlags
-    device_name = 'enterprises/LC03o3xgx8/devices/3790f81e0a0fef76'
-    command = 'REBOOT'
-    device_issue_command(androidmanagement, device_name, command)
+    # device_name = 'enterprises/LC03o3xgx8/devices/3b5fabf3c7961efe'
+    # command = 'REBOOT'
+    # password = ''  # leave blank for no password (no need to authenticate when restarting tablet)
+    # device_issue_command(androidmanagement, device_name, command, password)
 
 
 main()

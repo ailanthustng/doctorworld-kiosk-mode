@@ -8,14 +8,16 @@ prettyprint = pprint.PrettyPrinter(indent=4).pprint
 def create_webapp(androidmanagement, enterprise_name):
     # Icon goes here
     icon_url = 'https://developer.android.com/images/brand/Android_Robot.png'
+    web_app_url = 'https://raffles-e-kiosk.doctorworld.co/'
+    display_mode = 'FULL_SCREEN'  # other modes: STANDALONE, MINIMAL_UI
 
     icon_raw_data = urllib.request.urlopen(icon_url).read()
     icon_encoded_data = base64.urlsafe_b64encode(icon_raw_data).decode("utf-8")
 
     web_app = {
         "title": "Doctor World",
-        "startUrl": "https://raffles-e-kiosk.doctorworld.co/",
-        "displayMode": "FULL_SCREEN",
+        "startUrl": web_app_url,
+        "displayMode": display_mode,
         "icons": [
             {
                 "imageData": icon_encoded_data
