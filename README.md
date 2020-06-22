@@ -16,9 +16,9 @@
 1. In the Cloud Console, go to the **Create service account key page**.
 2. From the Service account list, select **New service account**.
 3. In the Service account name field, enter a *name*.
-4. From the Role list, select **Project** > **Owner**.
-5. Click **Create**. A JSON file that contains your key downloads to your computer.
-6. If JSON file doesn’t automatically download, under **Keys**, click **Add Key** > **Create new key**. 
+4. From the **Role list**, select **Project** > **Owner**.
+5. Click **Create**. A JSON file that contains your key will be downloaded to your computer.
+6. If JSON file does not download automatically, under **Keys**, click **Add Key** > **Create new key**. 
 Save the JSON.
 
 ### Setting up the virtualenv
@@ -43,6 +43,7 @@ Save the JSON.
 1. Input `icon`
 2. Input `web_app_url`
 3. Input `display_mode`
+4. Run program: `python main.py`
 
 ### Create / Update Policy
 1. Input `web_app_name`
@@ -70,10 +71,12 @@ Save the JSON.
             - `SETTINGS_ACCESS_ALLOWED`
             - `SETTINGS_ACCESS_BLOCKED` *(default)*
     3. `statusReportingSettings` (status report for enrolled devices when using `list_devices`)
+3. Run program: `python main.py`
 
 ### Create Enrollment Token (to enroll the device when first setting up)
 1. Comment in `web_app_name`, `policy` and `create_enrollment_token`.
 2. Default time to live for token is **1hr** from creation.
+3. Run program: `python main.py`
 
 ### Enrolling the device
 1. Prerequisites:
@@ -102,6 +105,7 @@ Send a command to the device.
 - `RESET_PASSWORD`
     - Leave password *empty* if you do not want authentication when restarting tablet.
     - Having a password means having to authenticate whenever the device is rebooted.
+3. Run program: `python main.py`
 
 
 ### `delete_device` 
@@ -109,6 +113,7 @@ Send a command to the device.
 > as well as **removing the device** from your enterprise.
 
 1. Input `device_name`
+2. Run program: `python main.py`
 
 ### `list_devices` 
 Retrieve the list of enrolled devices and their statuses.
@@ -122,3 +127,5 @@ Retrieve the list of enrolled devices and their statuses.
         - `devicePosture`
     4. `powerManagementEvents`:
         - `batteryLevel`
+
+1. Run program: `python main.py`
