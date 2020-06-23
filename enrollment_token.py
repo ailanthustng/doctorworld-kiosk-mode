@@ -28,3 +28,4 @@ def create_enrollment_token(androidmanagement, enterprise_name, policy):
     # Link
     # enrollment_link = 'https://enterprise.google.com/android/enroll?et=' + enrollment_token['value']
     # print('Please open this link on your device:', enrollment_link)
+
