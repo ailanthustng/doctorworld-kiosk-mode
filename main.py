@@ -20,7 +20,8 @@ def main():
 
     # =================================== ENTERPRISE RELATED ==================================
     # Create enterprise if no enterprise
-    # create_enterprise()
+    # cloud_project_id = 'android-kiosk-test-280419'
+    # create_enterprise(androidmanagement, cloud_project_id)
     # Enter the enterprise name here
     enterprise_name = 'enterprises/LC03o3xgx8'
 

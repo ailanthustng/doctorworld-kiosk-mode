@@ -1,10 +1,8 @@
 import pprint
 from apiclient.discovery import build
 
-androidmanagement = build('androidmanagement', 'v1')
-
-def create_enterprise():
-    cloud_project_id = 'android-kiosk-test-280419'
+def create_enterprise(androidmanagement, project_id):
+    cloud_project_id = project_id
 
     # Solution retrieved from Android Management API Quickstart:
     # https://colab.research.google.com/github/google/android-management-api-samples/blob/master/notebooks/quickstart.ipynb
