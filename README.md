@@ -30,7 +30,7 @@ Save the JSON.
     2. `virtualenv doctorworld`
     3. `source doctorworld/bin/activate`
     4. `pip install google-api-python-client`
-2. Download `start.sh` and put JSON file in same folder as `start.sh`.
+2. Download [start.sh](start.sh) and put JSON file in same folder as `start.sh`.
 3. Edit the path in `start.sh`.
 4. `chmod +x start.sh`.
 5. `source start.sh`.
