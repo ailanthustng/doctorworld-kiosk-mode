@@ -9,7 +9,7 @@
 1. Go to the [Cloud Console](https://console.cloud.google.com).
 2. Click **CREATE PROJECT**.
 3. Enter your project details, and then click **CREATE**.
-4. Take note of the *project ID* and add it into `enterprise.py`.
+4. Take note of the *project ID* and add it into `main.py`.
 
 ### Enable Android Enterprise API
 1. **Getting started** > **Explore and enable APIs** > **Library** > 
@@ -30,11 +30,11 @@ Save the JSON.
     2. `virtualenv doctorworld`
     3. `source doctorworld/bin/activate`
     4. `pip install google-api-python-client`
-2. Download [start.sh](start.sh) and put JSON file in same folder as `start.sh`.
+2. Download [start.sh](start.sh) and put it into the same folder as the **Service Account JSON file**.
 3. Edit the path in `start.sh`.
 4. `chmod +x start.sh`.
 5. `source start.sh`.
-6. Check if env variable has been set correctly: `echo $GOOGLE_APPLICATION_CREDENTIALS`.
+6. Check if environment variable has been set correctly: `echo $GOOGLE_APPLICATION_CREDENTIALS`.
 
 ### Create Enterprise
 1. Enter `cloud_project_id`
@@ -43,13 +43,13 @@ Save the JSON.
 4. Enter `enterprise_name` into `main.py`
 
 ### Create Webapp
-1. Input `icon`
+1. Input `icon` in `webapp.py`
 2. Input `web_app_url`
 3. Input `display_mode`
 4. Run program: `python main.py`
 
 ### Create / Update Policy
-1. Input `web_app_name`
+1. Input `web_app_name` in `main.py`
 2. Things to take note:
     1. has to be `False` during setup:
         1. `installAppsDisabled` (to allow for tablet to install Chrome)
