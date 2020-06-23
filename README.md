@@ -1,5 +1,8 @@
 # Setting up and Maintenance Guide
 
+- [Android Management API Reference](https://developers.google.com/android/management/reference/rest?authuser=1)
+- [Android Management Google API Python Client Documentation](http://googleapis.github.io/google-api-python-client/docs/dyn/androidmanagement_v1.html)
+
 ## Setting up
 
 ### Create Cloud Project
